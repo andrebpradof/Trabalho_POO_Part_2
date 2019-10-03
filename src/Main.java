@@ -15,7 +15,7 @@ public class Main {
         System.out.println("2 - Novo texto");
         System.out.println("3 - Instruções");
         System.out.println("4 - Sair");
-        System.out.println("Opcão: ");
+        System.out.println("Opção: ");
 
         switch (lerTeclado()) {
             case '1':
