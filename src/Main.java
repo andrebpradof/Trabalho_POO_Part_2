@@ -8,9 +8,10 @@ public class Main {
         return ler.next().charAt(0);
     }
 
+
     public static void lerTexto(){
         Scanner ler = new Scanner(System.in);
-        //ler.
+        String getTexto = new String();
 
     }
 
