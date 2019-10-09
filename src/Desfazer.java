@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Retornar {
+public class Desfazer {
     private LinkedList<Texto> listaRetornar;
     private int teste;
 }

@@ -1,5 +1,5 @@
 import java.util.LinkedList;
 
-public class Avnacar {
+public class Refazer {
     private LinkedList<Texto> listaAvancar;
 }
