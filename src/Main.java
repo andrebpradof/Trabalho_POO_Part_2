@@ -3,10 +3,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    public char lerTeclado() {
+    public char lerCaracterTeclado() {
         Scanner ler = new Scanner(System.in);
         return ler.next().charAt(0);
     }
+
+    public static void lerTexto(){
+        Scanner ler = new Scanner(System.in);
+        //ler.
+
+    }
+
 
     public void menu() {
         System.out.println("*********** EDITOR DE TEXTO ***********");
@@ -17,7 +24,7 @@ public class Main {
         System.out.println("4 - Sair");
         System.out.println("Opção: ");
 
-        switch (lerTeclado()) {
+        switch (lerCaracterTeclado()) {
             case '1':
 
                 break;
