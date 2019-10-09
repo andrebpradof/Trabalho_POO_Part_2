@@ -26,7 +26,10 @@ public class Main {
                 break;
 
             case '3':
-
+                System.out.println("    Comandos de edição:");
+                System.out.println("-Desfazer: Ctrl Z");
+                System.out.println("-Refazer: Ctrl Y");
+                System.out.println("-Salvar: Ctrl S");
                 break;
 
             case '4':
