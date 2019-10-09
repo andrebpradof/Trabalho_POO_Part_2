@@ -1,5 +1,5 @@
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class Refazer {
-    private LinkedList<Caracteres> listaAvancar;
+    private static Stack<Caracteres> avancar;
 }

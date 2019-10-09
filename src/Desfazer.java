@@ -1,5 +1,7 @@
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class Desfazer {
-    private static LinkedList<Paragrafo> texto;
+    private static Stack<Paragrafo> texto;
+
+
 }
