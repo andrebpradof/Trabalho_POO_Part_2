@@ -12,6 +12,11 @@ public class Main {
     public static void lerTexto(){
         Scanner ler = new Scanner(System.in);
         String getTexto = new String();
+        getTexto = ler.nextLine();
+
+        Texto.inserirParagrafo(getTexto);
+
+
 
     }
 
