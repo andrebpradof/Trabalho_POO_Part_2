@@ -17,8 +17,13 @@ public class Main {
         comando=getTexto.substring(0, 1);
         switch (comando){
             case ":Z":
+                Paragrafo memoria = Desfazer.pop();
+                Refazer.push(memoria);
                 break;
             case ":Y":
+                Paragrafo reescreve = Refazer.pop();
+                //printa
+                Desfazer.push(reescreve);
                 break;
             case ":S":
                 break;
