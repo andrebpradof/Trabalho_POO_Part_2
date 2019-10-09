@@ -10,9 +10,19 @@ public class Main {
 
 
     public static void lerTexto(){
+        String comando;
         Scanner ler = new Scanner(System.in);
         String getTexto = new String();
         getTexto = ler.nextLine();
+        comando=getTexto.substring(0, 1);
+        switch (comando){
+            case ":Z":
+                break;
+            case ":Y":
+                break;
+            case ":S":
+                break;
+        }
 
         Texto.inserirParagrafo(getTexto);
 
