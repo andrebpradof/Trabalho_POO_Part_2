@@ -2,6 +2,10 @@ package Editor;
 
 import java.io.Serializable;
 
+/**
+ * modelo de caracter
+ */
+
 public class Caracteres implements Serializable {
     private char caracter;
     private Usuario usuario;

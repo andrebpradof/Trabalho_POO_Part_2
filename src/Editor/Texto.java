@@ -4,6 +4,11 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Stack;
 
+/**
+ * classe responsavel pela manipulacao de paragrafos em uma lista de paragrafos que formam o texto,
+ * sendo assim a responsavel por realizar os comandos diretos de edicao do texto por parte do usuario
+ */
+
 public class Texto {
     private static LinkedList<Paragrafo> listaParagrafo;
     private static Stack<Paragrafo> stack;

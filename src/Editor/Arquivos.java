@@ -3,6 +3,10 @@ package Editor;
 import java.io.*;
 import java.util.LinkedList;
 
+/**
+ * Classe que realiza manipulacoes de arquivos para leitura e armazenamento dos textos editados pelo usuario
+ */
+
 public class Arquivos implements Serializable {
     private static String filename = "texto.bin";
     private static ObjectOutputStream output;

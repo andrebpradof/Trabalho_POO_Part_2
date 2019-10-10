@@ -3,6 +3,10 @@ package Editor;
 import java.io.Serializable;
 import java.util.LinkedList;
 
+/**
+ * classe responsavel pela manipulacao de caracteres e agrupamentos em listas que formam paragrafos
+ */
+
 public class Paragrafo implements Serializable {
     private LinkedList<Caracteres> listaCaracteres;
     /**
