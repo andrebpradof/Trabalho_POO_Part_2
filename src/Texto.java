@@ -21,7 +21,8 @@ public class Texto {
     }
 
     public static void lerArquivo() throws IOException {
-        listaParagrafo = new LinkedList<>();
+        if(listaParagrafo == null)
+            listaParagrafo = new LinkedList<>();
         LinkedList<Paragrafo> aux;
         aux = Arquivos.ler();
         if(aux != null){
@@ -45,7 +46,8 @@ public class Texto {
     }
 
     public static void limparTexto(){
-        listaParagrafo.clear();
+        if(listaParagrafo != null)
+            listaParagrafo.clear();
     }
 
     public static String desfazer(){ //Push
