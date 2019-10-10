@@ -1,7 +1,7 @@
 import javax.imageio.stream.ImageInputStream;
 import java.util.Scanner;
 
-public class Main {
+public class Main{
 
     public char lerCaracterTeclado() {
         Scanner ler = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Main {
     public static void lerTexto(){
         String comando;
         Scanner ler = new Scanner(System.in);
-        String getTexto = new String();
+        String getTexto;
         getTexto = ler.nextLine();
         comando=getTexto.substring(0, 1);
         switch (comando){

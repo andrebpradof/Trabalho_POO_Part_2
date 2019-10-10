@@ -1,15 +1,16 @@
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class Paragrafo {
-    private LinkedList<Caracteres> paragrafo;
+public class Paragrafo implements Serializable {
+    private LinkedList<Caracteres> listaCaracteres;
 
     public void adicionarParagrafo(String txt){
-        if (paragrafo==null){
-            paragrafo=new LinkedList();
+        if (listaCaracteres==null){
+            listaCaracteres= new LinkedList<>();
         }
         for (int i=0; i<txt.length();i++){
             Caracteres caracter=new Caracteres();
-            paragrafo.addLast(caracter);
+            listaCaracteres.addLast(caracter);
         }
     }
 }

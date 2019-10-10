@@ -1,14 +1,28 @@
+import java.io.IOException;
 import java.util.LinkedList;
 
 public class Texto {
-    private static LinkedList<Paragrafo> texto;
+    private static LinkedList<Paragrafo> listaParagrafo;
 
     public static void inserirParagrafo(String txt){
-        if (texto==null)
-            texto = new LinkedList();
+        if (listaParagrafo == null)
+            listaParagrafo = new LinkedList<>();
 
         Paragrafo paragrafo = new Paragrafo();
         paragrafo.adicionarParagrafo(txt);
-        texto.addLast(paragrafo);
+        listaParagrafo.addLast(paragrafo);
+    }
+
+    public static void lerArquivo() throws IOException {
+        listaParagrafo = new LinkedList<>();
+        LinkedList<Paragrafo> aux;
+        aux = Arquivos.ler();
+        if(aux != null){
+            listaParagrafo.addAll(aux);
+        }
+    }
+
+    public static void salvar() throws IOException {
+        Arquivos.salvar(listaParagrafo);
     }
 }
