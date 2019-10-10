@@ -10,7 +10,7 @@ public class Caracteres implements Serializable {
     private char caracter;
     private Usuario usuario;
 
-    public Caracteres(char caracter, int user){
+    public Caracteres(char caracter, int user){ //Seta os atributos
         this.caracter = caracter;
         this.usuario = new Usuario(user);
     }

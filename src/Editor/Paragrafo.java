@@ -14,10 +14,10 @@ public class Paragrafo implements Serializable {
      * @param txt string contendo os caracteres que serao listados no paragrafo.
      */
     public Paragrafo(String txt){
-        if (listaCaracteres==null){
+        if (listaCaracteres==null){ // Cria a lista se não existir ainda
             listaCaracteres= new LinkedList<>();
         }
-        for (int i=0; i<txt.length();i++){
+        for (int i=0; i<txt.length();i++){ // Faz uma lista de caracteres
             Caracteres caracter = new Caracteres(txt.charAt(i),1);
             listaCaracteres.addLast(caracter);
         }
@@ -28,7 +28,7 @@ public class Paragrafo implements Serializable {
      * @return retorna a string com o texto do paragrafo.
      */
 
-    public String getParagrafo() {
+    public String getParagrafo() { // Retorna o paragrafo (Linha) em String
         StringBuilder stringBuilder = new StringBuilder();
 
         for(int i=0; i<listaCaracteres.size(); i++)

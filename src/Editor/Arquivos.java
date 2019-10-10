@@ -21,7 +21,7 @@ public class Arquivos implements Serializable {
      * @throws IOException verifica se e possivel acressentar o paragrafo desejado a lista passada por parametro.
      */
 
-    public static void salvar(LinkedList<Paragrafo> texto) throws IOException {
+    public static void salvar(LinkedList<Paragrafo> texto) throws IOException { // Escreve no arquivo
         try {
             fileOut = new FileOutputStream(filename);
             output = new ObjectOutputStream(new FileOutputStream(filename));
@@ -45,7 +45,7 @@ public class Arquivos implements Serializable {
     public static LinkedList ler() throws IOException {
         try{
             verifica = new File(filename);
-            if(verifica.exists()){
+            if(verifica.exists()){ //Se o arquivo não existir
                 fileIn = new FileInputStream(filename);
                 input = new ObjectInputStream(new FileInputStream(filename));
                 return (LinkedList)input.readObject();

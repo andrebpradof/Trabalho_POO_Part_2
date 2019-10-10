@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"Arquivos"},{"p":"<Unnamed>","l":"Caracteres"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Paragrafo"},{"p":"<Unnamed>","l":"Texto"},{"p":"<Unnamed>","l":"Usuario"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Editor","l":"Arquivos"},{"p":"Editor","l":"Caracteres"},{"p":"Editor","l":"Main"},{"p":"Editor","l":"Paragrafo"},{"p":"Editor","l":"Texto"},{"p":"Editor","l":"Usuario"}]

@@ -10,7 +10,7 @@ public class Main {
      * @return retorna o caracter lido em um char
      */
 
-    public static char lerCaracterTeclado() {
+    public static char lerCaracterTeclado() { //Le um caracter do teclado
         Scanner ler = new Scanner(System.in);
         return ler.next().charAt(0);
     }
@@ -20,25 +20,25 @@ public class Main {
      * @throws IOException tratamento de excessao para o salvamento do texto
      */
 
-    public static void editor() throws IOException {
+    public static void editor() throws IOException { //Realiza as funções do editor
         Scanner ler = new Scanner(System.in);
         String opcao = "";
         String getTexto;
 
         while (true) {
-            getTexto = ler.nextLine();
+            getTexto = ler.nextLine(); //Pega o texto
 
-            if(getTexto.length() > 1)
+            if(getTexto.length() > 1) //Para verificar as opções abaixo (como o VIM)
                 opcao = getTexto.substring(0, 2);
 
             switch (opcao) {
-                case ":z":
+                case ":z": //Desfazer
                     System.out.print(Texto.desfazer());
                     break;
-                case ":y":
+                case ":y": //Refazer
                     System.out.print(Texto.refazer());
                     break;
-                case ":q":
+                case ":q": //Sair e pode salvar
                     System.out.print("\nDeseja salvar o texto? (s/n): ");
                     if(lerCaracterTeclado() == 's'){
                         Texto.salvar();
@@ -57,7 +57,7 @@ public class Main {
      * @throws InterruptedException tratamento de erro ao sair-se do programa.
      */
 
-    public static void menu() throws IOException, InterruptedException {
+    public static void menu() throws IOException, InterruptedException { //Menu do editor
         while (true) {
             System.out.println("*********** EDITOR DE TEXTO ***********");
             System.out.println("MENU");
@@ -71,26 +71,26 @@ public class Main {
 
             switch (lerCaracterTeclado()) {
                 case '1':
-                    Texto.limparTexto();
+                    Texto.limparTexto(); //Limpa a lista
                     System.out.println("\n******* EDITOR *******");
-                    editor();
+                    editor(); //Chama o editor
                     break;
 
                 case '2':
                     System.out.println("\n******* EDITOR *******");
-                    Texto.limparTexto();
-                    Texto.lerArquivo();
-                    System.out.print(Texto.getTexto());
-                    editor();
+                    Texto.limparTexto(); //Limpa a lista
+                    Texto.lerArquivo(); //Le um arquivo ja existente
+                    System.out.print(Texto.getTexto()); //Imprime o que foi lido
+                    editor(); //Chama o editor
                     break;
 
                 case '3':
                     System.out.println("\n******* EDITOR *******");
-                    System.out.print(Texto.getTexto());
+                    System.out.print(Texto.getTexto()); //Só imprime o q ja estava na lista
                     editor();
 
                 case '4':
-                    Texto.salvar();
+                    Texto.salvar(); // Salva
                     System.out.println("Texto salvo!");
                     break;
 

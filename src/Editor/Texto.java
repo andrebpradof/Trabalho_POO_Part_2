@@ -19,15 +19,15 @@ public class Texto {
      */
 
     public static void inserir(String txt){
-        if (listaParagrafo == null){
+        if (listaParagrafo == null){ //Cria uma lista de paragrafos
             listaParagrafo = new LinkedList<>();
         }
 
-        if(stack != null){
+        if(stack != null){ //Limpa se ja existir
             stack.clear();
         }
 
-        Paragrafo paragrafo = new Paragrafo(txt);
+        Paragrafo paragrafo = new Paragrafo(txt); //Add o paragrafo
         listaParagrafo.addLast(paragrafo);
     }
 
@@ -36,7 +36,7 @@ public class Texto {
      * @throws IOException caso ainda nao haja uma lista para realizar a leitura, abre-se uma nova lista.
      */
 
-    public static void lerArquivo() throws IOException {
+    public static void lerArquivo() throws IOException { //Le do arquivo e joga na lista
         if(listaParagrafo == null)
             listaParagrafo = new LinkedList<>();
         LinkedList<Paragrafo> aux;
@@ -51,7 +51,7 @@ public class Texto {
      * @throws IOException como o metodo "Arquivos.salvar" aqui chamado trabalha com excessão, é dado o comando throws IOException.
      */
 
-    public static void salvar() throws IOException {
+    public static void salvar() throws IOException { //Salva a lista
         Arquivos.salvar(listaParagrafo);
     }
 
@@ -60,7 +60,7 @@ public class Texto {
      * @return retorna o texto completo atual.
      */
 
-    public static String getTexto() {
+    public static String getTexto() { //Retorna o texto inteiro da lista em uma String
         StringBuilder stringBuilder = new StringBuilder();
 
         for(int i=0; i<listaParagrafo.size();i++){
@@ -75,7 +75,7 @@ public class Texto {
      * Esvazia a lista na qual se encontra o texto (ListaParagrafo).
      */
 
-    public static void limparTexto(){
+    public static void limparTexto(){ //Limpa a Lista
         if(listaParagrafo != null)
             listaParagrafo.clear();
     }
@@ -85,7 +85,7 @@ public class Texto {
      * @return retorna o texto com o paragrafo retirado.
      */
 
-    public static String desfazer(){ //Push
+    public static String desfazer(){ //Faz push da Stack
         if(stack == null)
             stack = new Stack<>();
         stack.push(listaParagrafo.removeLast());
@@ -97,7 +97,7 @@ public class Texto {
      * @return retorna o texto com o paragrafo reescrito.
      */
 
-    public static String refazer(){ //Pop
+    public static String refazer(){ //Faz pop da stack
         if(stack != null && stack.size() != 0){
             listaParagrafo.addLast(stack.pop());
         }
