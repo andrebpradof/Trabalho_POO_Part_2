@@ -25,6 +25,11 @@ public class Texto {
         listaParagrafo.addLast(paragrafo);
     }
 
+    /**
+     * lê a texto do aquivo e salva na lista.
+     * @throws IOException caso ainda nao haja uma lista para realizar a leitura, abre-se uma nova lista.
+     */
+
     public static void lerArquivo() throws IOException {
         if(listaParagrafo == null)
             listaParagrafo = new LinkedList<>();
@@ -35,9 +40,19 @@ public class Texto {
         }
     }
 
+    /**
+     * Salva a lista com o texto no arquivo.
+     * @throws IOException como o metodo "Arquivos.salvar" aqui chamado trabalha com excessão, é dado o comando throws IOException.
+     */
+
     public static void salvar() throws IOException {
         Arquivos.salvar(listaParagrafo);
     }
+
+    /**
+     * acrescenta os paragrafos lidos ao texto (ListaParagrafo).
+     * @return retorna o texto completo atual.
+     */
 
     public static String getTexto() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -50,10 +65,19 @@ public class Texto {
         return stringBuilder.toString();
     }
 
+    /**
+     * Esvazia a lista na qual se encontra o texto (ListaParagrafo).
+     */
+
     public static void limparTexto(){
         if(listaParagrafo != null)
             listaParagrafo.clear();
     }
+
+    /**
+     * Retira do texto o último parágrafo adicionado à lista, jogando-o no topo da pilha caso se queira reescrevê-lo.
+     * @return retorna o texto com o parágrafo retirado.
+     */
 
     public static String desfazer(){ //Push
         if(stack == null)
@@ -61,6 +85,11 @@ public class Texto {
         stack.push(listaParagrafo.removeLast());
         return getTexto();
     }
+
+    /**
+     * joga novamente na lista do texto o ultimo paragrafo excluido (pega o paragrafo do topo da pilha)
+     * @return retorna o texto com o paragrafo reescrito.
+     */
 
     public static String refazer(){ //Pop
         if(stack != null && stack.size() != 0){
