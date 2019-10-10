@@ -1,3 +1,5 @@
+package Editor;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -30,7 +32,7 @@ public class Main {
                     System.out.print("\nDeseja salvar o texto? (s/n): ");
                     if(lerCaracterTeclado() == 's'){
                         Texto.salvar();
-                        System.out.println("Texto salvo!");
+                        System.out.println("Editor.Texto salvo!");
                     }
                     return;
                 default:
