@@ -3,7 +3,10 @@ import java.util.LinkedList;
 
 public class Paragrafo implements Serializable {
     private LinkedList<Caracteres> listaCaracteres;
-
+    /**
+     * acrescenta os caracteres lidos ao paragrafo (listaCaracteres).
+     * @param txt string contendo os caracteres que serao listados no paragrafo.
+     */
     public Paragrafo(String txt){
         if (listaCaracteres==null){
             listaCaracteres= new LinkedList<>();
@@ -13,6 +16,11 @@ public class Paragrafo implements Serializable {
             listaCaracteres.addLast(caracter);
         }
     }
+
+    /**
+     * Lê a lista de caracteres do paragrafo e converte em texto na forma de string.
+     * @return retorna a string com o texto do paragrafo.
+     */
 
     public String getParagrafo() {
         StringBuilder stringBuilder = new StringBuilder();
