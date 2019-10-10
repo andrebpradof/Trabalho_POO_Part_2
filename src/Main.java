@@ -20,27 +20,29 @@ public class Main{
         Desfazer.push(memoria);
     }
 
-    public static void lerTexto(){
+    public static void lerTexto() throws IOException {
         String comando;
         Scanner ler = new Scanner(System.in);
         String getTexto;
-        getTexto = ler.nextLine();
-        comando=getTexto.substring(0, 1);
-        switch (comando){
-            case ":Z":
-                ctrlZ();
-                break;
-            case ":Y":
-                ctrlY();
-                break;
-            case ":S":
-                break;
+        while (true) {
+            getTexto = ler.nextLine();
+            comando = getTexto.substring(0, 2);
+            switch (comando) {
+                case ":Z":
+                    ctrlZ();
+                    break;
+                case ":Y":
+                    ctrlY();
+                    break;
+                case ":S":
+                    Texto.salvar();
+                    break;
+                case ":q":
+                    return;
+            }
+
+            Texto.inserirParagrafo(getTexto);
         }
-
-        Texto.inserirParagrafo(getTexto);
-
-
-
     }
 
 
@@ -51,14 +53,14 @@ public class Main{
         System.out.println("2 - Novo texto");
         System.out.println("3 - Instruções");
         System.out.println("4 - Sair");
-        System.out.println("Opção: ");
+        System.out.print("Opção: ");
 
         switch (lerCaracterTeclado()) {
             case '1':
                 Texto.lerArquivo();
                 break;
             case '2':
-
+                lerTexto();
                 break;
 
             case '3':
