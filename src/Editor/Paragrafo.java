@@ -20,7 +20,7 @@ public class Paragrafo implements Serializable {
     }
 
     /**
-     * Lê a lista de caracteres do paragrafo e converte em texto na forma de string.
+     * Le a lista de caracteres do paragrafo e converte em texto na forma de string.
      * @return retorna a string com o texto do paragrafo.
      */
 

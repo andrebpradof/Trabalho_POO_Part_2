@@ -76,8 +76,8 @@ public class Texto {
     }
 
     /**
-     * Retira do texto o último parágrafo adicionado à lista, jogando-o no topo da pilha caso se queira reescrevê-lo.
-     * @return retorna o texto com o parágrafo retirado.
+     * Retira do texto o último parágrafo adicionado a lista, jogando-o no topo da pilha caso se queira reescreve-lo.
+     * @return retorna o texto com o paragrafo retirado.
      */
 
     public static String desfazer(){ //Push

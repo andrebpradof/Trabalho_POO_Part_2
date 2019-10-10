@@ -12,9 +12,9 @@ public class Arquivos implements Serializable {
     private static FileOutputStream fileOut;
 
     /**
-     * Salva o os paragrafos no testo, isto é, na lista de paragrafos.
+     * Salva o os paragrafos no testo, isto e, na lista de paragrafos.
      * @param texto recebe como parametro a lista na qual esta sendo salvo o texto, paragrafo a paragrafo.
-     * @throws IOException verifica se é possivel acressentar o paragrafo desejado à lista passada por parametro.
+     * @throws IOException verifica se e possivel acressentar o paragrafo desejado a lista passada por parametro.
      */
 
     public static void salvar(LinkedList<Paragrafo> texto) throws IOException {
@@ -33,7 +33,7 @@ public class Arquivos implements Serializable {
     }
 
     /**
-     * Lê o arquivo em que o texto foi salvo e o converte em uma forma assecivel e editável.
+     * Le o arquivo em que o texto foi salvo e o converte em uma forma assecivel e editavel.
      * @return retorna uma lista dos paragrafos do texto lido.
      * @throws IOException indica se não foi possivel ler o arquivo desejado, printando uma mensagem de erro
      */

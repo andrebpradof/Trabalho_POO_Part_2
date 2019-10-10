@@ -16,8 +16,8 @@ public class Main {
     }
 
     /**
-     * Lê os comandos do usuario e realiza as tarefas de edições compativeis com tais comandos
-     * @throws IOException tratamento de excessão para o salvamento do texto
+     * Le os comandos do usuario e realiza as tarefas de edicoes compativeis com tais comandos
+     * @throws IOException tratamento de excessao para o salvamento do texto
      */
 
     public static void editor() throws IOException {
@@ -52,7 +52,7 @@ public class Main {
     }
 
     /**
-     * Exibe as opções de navegacao do usuario no programa, le o comando do usuario e realiza/chama a opcao desejada.
+     * Exibe as opcoes de navegacao do usuario no programa, le o comando do usuario e realiza/chama a opcao desejada.
      * @throws IOException tratamento de erro para as tarefas envolvendo arquivos.
      * @throws InterruptedException tratamento de erro ao sair-se do programa.
      */
