@@ -1,78 +1,79 @@
-import javax.imageio.stream.ImageInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main{
+public class Main {
 
-        public static char lerCaracterTeclado() {
+    public static char lerCaracterTeclado() {
         Scanner ler = new Scanner(System.in);
         return ler.next().charAt(0);
     }
 
-    public static void ctrlZ(){
-        Paragrafo memoria = Desfazer.pop();
-        Refazer.push(memoria);
-    }
-
-    public static void ctrlY(){
-        Paragrafo memoria = Refazer.pop();
-        //printa
-        Desfazer.push(memoria);
-    }
-
-    public static void lerTexto() throws IOException {
-        String comando;
+    public static void editor() throws IOException {
         Scanner ler = new Scanner(System.in);
         String getTexto;
         while (true) {
             getTexto = ler.nextLine();
-            comando = getTexto.substring(0, 2);
-            switch (comando) {
-                case ":Z":
-                    ctrlZ();
+            switch (getTexto.substring(0, 2)) {
+                case ":z":
+                    System.out.print(Texto.desfazer());
                     break;
-                case ":Y":
-                    ctrlY();
-                    break;
-                case ":S":
-                    Texto.salvar();
+                case ":y":
+                    System.out.print(Texto.refazer());
                     break;
                 case ":q":
+                    System.out.print("\nDeseja salvar o texto? (s/n): ");
+                    if(lerCaracterTeclado() == 's'){
+                        Texto.salvar();
+                        System.out.println("Texto salvo!");
+                    }
                     return;
+                default:
+                    Texto.inserir(getTexto);
             }
-
-            Texto.inserirParagrafo(getTexto);
         }
     }
 
 
     public static void menu() throws IOException, InterruptedException {
-        System.out.println("*********** EDITOR DE TEXTO ***********");
-        System.out.println("MENU");
-        System.out.println("1 - Carregar texto salvo");
-        System.out.println("2 - Novo texto");
-        System.out.println("3 - Instruções");
-        System.out.println("4 - Sair");
-        System.out.print("Opção: ");
+        while (true) {
+            System.out.println("*********** EDITOR DE TEXTO ***********");
+            System.out.println("MENU");
+            System.out.println("1 - Carregar texto salvo");
+            System.out.println("2 - Novo texto");
+            System.out.println("3 - Continuar edição");
+            System.out.println("4 - Instruções");
+            System.out.println("5 - Sair");
+            System.out.print("Opção: ");
 
-        switch (lerCaracterTeclado()) {
-            case '1':
-                Texto.lerArquivo();
-                break;
-            case '2':
-                lerTexto();
-                break;
+            switch (lerCaracterTeclado()) {
+                case '1':
+                    System.out.println("\n******* EDITOR *******");
+                    Texto.limparTexto();
+                    Texto.lerArquivo();
+                    System.out.print(Texto.getTexto());
+                    editor();
+                    break;
+                case '2':
+                    System.out.println("\n******* EDITOR *******");
+                    editor();
+                    break;
 
-            case '3':
-                System.out.println("    Comandos de edição:");
-                System.out.println("-Desfazer= :Z");
-                System.out.println("-Refazer= :Y");
-                System.out.println("-Salvar= :S");
-                break;
+                case '3':
+                    System.out.println("\n******* EDITOR *******");
+                    System.out.print(Texto.getTexto());
+                    editor();
 
-            case '4':
-                System.exit(0);
-                break;
+                case '4':
+                    System.out.println("    Comandos de edição:");
+                    System.out.println("-Desfazer= :z");
+                    System.out.println("-Refazer= :y");
+                    System.out.println("-Sair= :q");
+                    break;
+
+                case '5':
+                    System.exit(0);
+                    break;
+            }
         }
     }
 

@@ -4,7 +4,15 @@
     <list default="true" id="39395ee4-ce31-4842-a6ae-bbdad811afd1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Editor/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Editor/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Texto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Editor/Texto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Editor/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Caracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Caracteres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desfazer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paragrafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paragrafo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Refazer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Texto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570674891042</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit gru">
+      <created>1570675779975</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1570675779975</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,9 +206,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/Texto.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
