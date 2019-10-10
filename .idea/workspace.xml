@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39395ee4-ce31-4842-a6ae-bbdad811afd1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Paragrafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paragrafo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Arquivos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Caracteres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/META-INF/Editor.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/META-INF/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Paragrafo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Texto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/Usuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Editor/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor/Arquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Arquivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor/Caracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Caracteres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Texto.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570734494029</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Commit gru">
+      <created>1570735313559</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1570735313559</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

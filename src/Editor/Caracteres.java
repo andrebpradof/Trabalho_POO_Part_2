@@ -11,6 +11,11 @@ public class Caracteres implements Serializable {
         this.usuario = new Usuario(user);
     }
 
+    /**
+     * retorna o caracter
+     * @return retorna o caracter em um char
+     */
+
     public char getCaracter() {
         return caracter;
     }

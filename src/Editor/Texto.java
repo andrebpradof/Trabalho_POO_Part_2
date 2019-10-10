@@ -42,7 +42,7 @@ public class Texto {
     }
 
     /**
-     * Salva a lista com o texto no arquivo.
+     * Comando para salvar a lista com o texto no arquivo.
      * @throws IOException como o metodo "Arquivos.salvar" aqui chamado trabalha com excessão, é dado o comando throws IOException.
      */
 

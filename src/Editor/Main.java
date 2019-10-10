@@ -5,10 +5,20 @@ import java.util.Scanner;
 
 public class Main {
 
+    /**
+     * le o caracter digitado
+     * @return retorna o caracter lido em um char
+     */
+
     public static char lerCaracterTeclado() {
         Scanner ler = new Scanner(System.in);
         return ler.next().charAt(0);
     }
+
+    /**
+     * Lê os comandos do usuario e realiza as tarefas de edições compativeis com tais comandos
+     * @throws IOException tratamento de excessão para o salvamento do texto
+     */
 
     public static void editor() throws IOException {
         Scanner ler = new Scanner(System.in);
@@ -41,6 +51,11 @@ public class Main {
         }
     }
 
+    /**
+     * Exibe as opções de navegacao do usuario no programa, le o comando do usuario e realiza/chama a opcao desejada.
+     * @throws IOException tratamento de erro para as tarefas envolvendo arquivos.
+     * @throws InterruptedException tratamento de erro ao sair-se do programa.
+     */
 
     public static void menu() throws IOException, InterruptedException {
         while (true) {
@@ -76,6 +91,7 @@ public class Main {
 
                 case '4':
                     Texto.salvar();
+                    System.out.println("Texto salvo!");
                     break;
 
                 case '5':
