@@ -1,9 +1,10 @@
 import javax.imageio.stream.ImageInputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main{
 
-    public char lerCaracterTeclado() {
+        public static char lerCaracterTeclado() {
         Scanner ler = new Scanner(System.in);
         return ler.next().charAt(0);
     }
@@ -43,7 +44,7 @@ public class Main{
     }
 
 
-    public void menu() {
+    public static void menu() throws IOException, InterruptedException {
         System.out.println("*********** EDITOR DE TEXTO ***********");
         System.out.println("MENU");
         System.out.println("1 - Carregar texto salvo");
@@ -54,7 +55,7 @@ public class Main{
 
         switch (lerCaracterTeclado()) {
             case '1':
-
+                Texto.lerArquivo();
                 break;
             case '2':
 
@@ -73,7 +74,7 @@ public class Main{
         }
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException, InterruptedException {
+        menu();
     }
 }
