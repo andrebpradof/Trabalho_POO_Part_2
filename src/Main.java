@@ -8,6 +8,16 @@ public class Main {
         return ler.next().charAt(0);
     }
 
+    public static void ctrlZ(){
+        Paragrafo memoria = Desfazer.pop();
+        Refazer.push(memoria);
+    }
+
+    public static void ctrlY(){
+        Paragrafo memoria = Refazer.pop();
+        //printa
+        Desfazer.push(memoria);
+    }
 
     public static void lerTexto(){
         String comando;
@@ -17,13 +27,10 @@ public class Main {
         comando=getTexto.substring(0, 1);
         switch (comando){
             case ":Z":
-                Paragrafo memoria = Desfazer.pop();
-                Refazer.push(memoria);
+                ctrlZ();
                 break;
             case ":Y":
-                Paragrafo reescreve = Refazer.pop();
-                //printa
-                Desfazer.push(reescreve);
+                ctrlY();
                 break;
             case ":S":
                 break;
