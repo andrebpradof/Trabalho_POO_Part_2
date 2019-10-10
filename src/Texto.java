@@ -7,6 +7,11 @@ public class Texto {
     private static LinkedList<Paragrafo> listaParagrafo;
     private static Stack<Paragrafo> stack;
 
+    /**
+     * Insere uma String na lista de paragrafos
+     * @param txt String para insercao
+     */
+
     public static void inserir(String txt){
         if (listaParagrafo == null){
             listaParagrafo = new LinkedList<>();
