@@ -12,6 +12,7 @@ import java.util.Stack;
 public class Texto {
     private static LinkedList<Paragrafo> listaParagrafo;
     private static Stack<Paragrafo> stack;
+    private static String ultimaAcao = ""; // Controle para o refazer desfazer e tipo de inserção
 
     /**
      * Insere uma String na lista de paragrafos
@@ -27,8 +28,13 @@ public class Texto {
             stack.clear();
         }
 
+        if(ultimaAcao.equals(":r") && listaParagrafo.size() > 0){ //Verifica se a ultima ação foi remover
+            txt = listaParagrafo.getLast().getParagrafo() + txt;
+            listaParagrafo.removeLast();
+        }
         Paragrafo paragrafo = new Paragrafo(txt); //Add o paragrafo
         listaParagrafo.addLast(paragrafo);
+        ultimaAcao = ":i"; // Inserir
     }
 
     /**
@@ -48,7 +54,7 @@ public class Texto {
 
     /**
      * Comando para salvar a lista com o texto no arquivo.
-     * @throws IOException como o metodo "Arquivos.salvar" aqui chamado trabalha com excessão, é dado o comando throws IOException.
+     * @throws IOException como o metodo "Arquivos.salvar" aqui chamado trabalha com excessao, eh dado o comando throws IOException.
      */
 
     public static void salvar() throws IOException { //Salva a lista
@@ -65,7 +71,7 @@ public class Texto {
 
         for(int i=0; i<listaParagrafo.size();i++){
             stringBuilder.append(listaParagrafo.get(i).getParagrafo());
-            if(i != listaParagrafo.size())
+            if(i != listaParagrafo.size()-1)
                 stringBuilder.append("\n");
         }
         return stringBuilder.toString();
@@ -81,15 +87,51 @@ public class Texto {
     }
 
     /**
-     * Retira do texto o último parágrafo adicionado a lista, jogando-o no topo da pilha caso se queira reescreve-lo.
+     * Verifica se a Satck foi criada, caso nao, entao cria a Stack
+     */
+    private static void criaStack(){ //Cria a stack, caso ainda esja como null
+        if(stack == null)
+            stack = new Stack<>();
+    }
+
+    /**
+     * Remove um caracter do paragrafo
+     * @return Retorna o texto com o caracter removido
+     */
+
+    public static String remover(){
+        if(listaParagrafo != null && listaParagrafo.size() > 0) {
+            criaStack();
+            Paragrafo paragrafo = new Paragrafo(listaParagrafo.getLast().getParagrafo());
+            stack.push(paragrafo); //Coloca a alteração na Stack
+            listaParagrafo.getLast().remover(); //Remove o ultimo caracter do texto
+            ultimaAcao = ":r"; //Marcador
+            return getTexto();
+        }
+        return "";
+    }
+
+    /**
+     * Retira do texto o ultimo parágrafo adicionado a lista, jogando-o no topo da pilha caso se queira reescreve-lo.
      * @return retorna o texto com o paragrafo retirado.
      */
 
     public static String desfazer(){ //Faz push da Stack
-        if(stack == null)
-            stack = new Stack<>();
-        stack.push(listaParagrafo.removeLast());
-        return getTexto();
+        if(listaParagrafo != null){
+            if(ultimaAcao.equals(":r")){
+                if(stack != null && stack.size() != 0){
+                    listaParagrafo.removeLast();
+                    listaParagrafo.addLast(stack.pop());
+                    ultimaAcao = ":zr";
+                }
+            }else {
+                criaStack();
+                stack.push(listaParagrafo.removeLast());
+                ultimaAcao = ":z";
+            }
+            return getTexto();
+        }
+        return "";
     }
 
     /**
@@ -98,9 +140,17 @@ public class Texto {
      */
 
     public static String refazer(){ //Faz pop da stack
-        if(stack != null && stack.size() != 0){
-            listaParagrafo.addLast(stack.pop());
+        if(listaParagrafo != null) {
+            if (ultimaAcao.equals(":zr")) {
+                remover();
+            } else if(ultimaAcao.equals(":z")) {
+                if (stack != null && stack.size() != 0) {
+                    listaParagrafo.addLast(stack.pop());
+                    ultimaAcao = ":y";
+                }
+            }
+            return getTexto();
         }
-        return getTexto();
+        return "";
     }
 }

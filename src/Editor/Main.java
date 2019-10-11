@@ -29,14 +29,20 @@ public class Main {
             getTexto = ler.nextLine(); //Pega o texto
 
             if(getTexto.length() > 1) //Para verificar as opções abaixo (como o VIM)
-                opcao = getTexto.substring(0, 2);
+                opcao = getTexto.substring(0, 2).toLowerCase();
 
             switch (opcao) {
                 case ":z": //Desfazer
-                    System.out.print(Texto.desfazer());
+                    System.out.println("\n******* EDITOR *******");
+                    System.out.println(Texto.desfazer());
                     break;
                 case ":y": //Refazer
-                    System.out.print(Texto.refazer());
+                    System.out.println("\n******* EDITOR *******");
+                    System.out.println(Texto.refazer());
+                    break;
+                case ":r": //Remover
+                    System.out.println("\n******* EDITOR *******");
+                    System.out.print(Texto.remover());
                     break;
                 case ":q": //Sair e pode salvar
                     System.out.print("\nDeseja salvar o texto? (s/n): ");
@@ -48,6 +54,7 @@ public class Main {
                 default:
                     Texto.inserir(getTexto);
             }
+            opcao = "";
         }
     }
 
@@ -71,8 +78,8 @@ public class Main {
 
             switch (lerCaracterTeclado()) {
                 case '1':
-                    Texto.limparTexto(); //Limpa a lista
                     System.out.println("\n******* EDITOR *******");
+                    Texto.limparTexto(); //Limpa a lista
                     editor(); //Chama o editor
                     break;
 
@@ -80,13 +87,13 @@ public class Main {
                     System.out.println("\n******* EDITOR *******");
                     Texto.limparTexto(); //Limpa a lista
                     Texto.lerArquivo(); //Le um arquivo ja existente
-                    System.out.print(Texto.getTexto()); //Imprime o que foi lido
+                    System.out.println(Texto.getTexto()); //Imprime o que foi lido
                     editor(); //Chama o editor
                     break;
 
                 case '3':
                     System.out.println("\n******* EDITOR *******");
-                    System.out.print(Texto.getTexto()); //Só imprime o q ja estava na lista
+                    System.out.println(Texto.getTexto()); //Só imprime o q ja estava na lista
                     editor();
 
                 case '4':
@@ -96,9 +103,10 @@ public class Main {
 
                 case '5':
                     System.out.println("    Comandos de edição:");
-                    System.out.println("-Desfazer= :z");
-                    System.out.println("-Refazer= :y");
-                    System.out.println("-Sair= :q");
+                    System.out.println("-Desfazer = :z");
+                    System.out.println("-Refazer = :y");
+                    System.out.println("-Remover = r");
+                    System.out.println("-Sair = :q");
                     break;
 
                 case '6':

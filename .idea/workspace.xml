@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39395ee4-ce31-4842-a6ae-bbdad811afd1" name="Default Changelist" comment="Ultimo commit">
+    <list default="true" id="39395ee4-ce31-4842-a6ae-bbdad811afd1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Arquivos.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Arquivos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Caracteres.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Caracteres.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Paragrafo.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Paragrafo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Texto.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Texto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/Usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/Usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allclasses-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/allpackages-index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/constant-values.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/element-list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/help-doc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/index-files/index-10.html" afterDir="false" />
@@ -32,14 +25,9 @@
       <change beforePath="$PROJECT_DIR$/JavaDoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/member-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/member-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/package-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/package-search-index.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaDoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/type-search-index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaDoc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/JavaDoc/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/desktop.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor/Arquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Arquivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Editor/Caracteres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Caracteres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor/Paragrafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Paragrafo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor/Texto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/Texto.java" afterDir="false" />
@@ -81,8 +69,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -120,6 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569895237131</updated>
+      <workItem from="1570819601878" duration="7457000" />
     </task>
     <task id="LOCAL-00001" summary="teste inicial">
       <created>1570130317466</created>
@@ -254,8 +248,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570745823701</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ultimo commit">
+      <created>1570747317920</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570747317920</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

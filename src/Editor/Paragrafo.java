@@ -24,6 +24,14 @@ public class Paragrafo implements Serializable {
     }
 
     /**
+     * Remove o ultimo caracter da lista
+     */
+
+    public void remover(){
+        listaCaracteres.removeLast();
+    }
+
+    /**
      * Le a lista de caracteres do paragrafo e converte em texto na forma de string.
      * @return retorna a string com o texto do paragrafo.
      */
