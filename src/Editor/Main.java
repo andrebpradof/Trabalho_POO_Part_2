@@ -1,3 +1,9 @@
+/*
+    Nomes: André Baconcelo Prado Furlanetii - 10748305
+           Marcelo Magalães Coelho - 10716633
+           
+*/
+
 package Editor;
 
 import java.io.IOException;
