@@ -123,6 +123,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        menu();
+        InterfaceGrafica interfaceGrafica = new InterfaceGrafica();
     }
 }
