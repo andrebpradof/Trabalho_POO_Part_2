@@ -117,7 +117,7 @@ public class Texto {
      */
 
     public static String desfazer(){ //Faz push da Stack
-        if(listaParagrafo != null){
+        if(listaParagrafo != null && listaParagrafo.size() != 0){
             if(ultimaAcao.equals(":r")){
                 if(stack != null && stack.size() != 0){
                     listaParagrafo.removeLast();
