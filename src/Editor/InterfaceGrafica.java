@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.io.*;
 import java.awt.event.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.UndoableEditEvent;
 import javax.swing.event.UndoableEditListener;
 import javax.swing.plaf.metal.*;
@@ -16,6 +17,7 @@ public class InterfaceGrafica extends JFrame{
 
     private JMenu menuFile = new JMenu("Arquivo");
     private JMenu menuEdit = new JMenu("Editar");
+    private JMenu menuOpcao = new JMenu("Opções");
     private JMenuItem menuItemSair = new JMenuItem("Sair");
     private JMenuBar barra = new JMenuBar();
     private JMenuItem menuItemNovo = new JMenuItem("Novo");
@@ -26,9 +28,9 @@ public class InterfaceGrafica extends JFrame{
     private JMenuItem menuItemRefazer = new JMenuItem("Refazer");
     private JMenuItem menuItemCopiar = new JMenuItem("Copiar");
     private JMenuItem menuItemRecortar = new JMenuItem("Recortar");
-    private JMenuItem menuItemRemover = new JMenuItem("Remover");
+ //   private JMenuItem menuItemRemover = new JMenuItem("Remover");
     private JMenuItem menuItemSelecionar = new JMenuItem("Selecionar");
-    private JPanel painel = new JPanel();
+    private JScrollPane scrollPane;
     private JTextArea textArea = new JTextArea();
     private UndoManager undoManager = new UndoManager();
 
@@ -37,13 +39,11 @@ public class InterfaceGrafica extends JFrame{
 
         this.setLayout(new BorderLayout());
 
-        barra.add(menuFile);
-        barra.add(menuEdit);
-        barra.add(menuItemSair);
-        
         menuFile.add(menuItemNovo);
         menuFile.add(menuItemAbrir);
         menuFile.add(menuItemSalvar);
+
+        menuOpcao.add(menuItemSair);
 
         menuItemDesfazer.setEnabled(false);
         menuItemRefazer.setEnabled(false);
@@ -51,14 +51,20 @@ public class InterfaceGrafica extends JFrame{
         menuEdit.add(menuItemCopiar);
         menuEdit.add(menuItemColar);
         menuEdit.add(menuItemRecortar);
-        menuEdit.add(menuItemRemover);
+      //  menuEdit.add(menuItemRemover);
         menuEdit.add(menuItemDesfazer);
         menuEdit.add(menuItemRefazer);
 
+        barra.add(menuFile);
+        barra.add(menuEdit);
+        barra.add(menuOpcao);
+
         textArea.setEditable(true);
+        textArea.setBorder(new EmptyBorder(5,5,5,5));
 
         this.setJMenuBar(barra);
-        this.add(textArea,BorderLayout.CENTER);
+        scrollPane = new JScrollPane(textArea);
+        this.getContentPane().add(scrollPane,BorderLayout.CENTER);
 
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -113,7 +119,14 @@ public class InterfaceGrafica extends JFrame{
                 textArea.cut();
             }
         });
-
+/*
+        menuItemRemover.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textArea.setText(textArea.getText().replace(textArea.getSelectedText(),""));
+            }
+        });
+*/
         menuItemDesfazer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -154,8 +167,6 @@ public class InterfaceGrafica extends JFrame{
                 updateMenuItens();
             }
         });
-
-
     }
 
     private void updateMenuItens(){
