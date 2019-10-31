@@ -13,6 +13,11 @@ import javax.swing.undo.CannotRedoException;
 import javax.swing.undo.CannotUndoException;
 import javax.swing.undo.UndoManager;
 
+/**
+ * Classe com a interface grafica, suas funcionalidades de edição de texto e
+ * comando de fechamento e as chamadas para as funcionalidades de manipulaçãod e arquivos.
+ */
+
 public class InterfaceGrafica extends JFrame{
 
     private JMenu menuFile = new JMenu("Arquivo");
@@ -34,6 +39,14 @@ public class InterfaceGrafica extends JFrame{
     private JTextArea textArea = new JTextArea();
     private UndoManager undoManager = new UndoManager();
 
+    /** Construtor da classe InterfaceGrafica.
+     * Inicializa a interface, estrutura a janela com a area de texto e a barra de ferramentas, com cada um dos
+     * menus nela presentes, nos quais sao organizados seus respectivos itens.
+     * Implementa as funcionalidades dos itens de edicao de texto e do item "Sair",
+     * alem de chamar os metodos da classe "Arqivos" que implementam as funcionalidades
+     * dos itens de manipulacao de arquivo.
+     */
+
     public InterfaceGrafica(){
         super("Editor de texto");
 
@@ -51,6 +64,7 @@ public class InterfaceGrafica extends JFrame{
         menuEdit.add(menuItemCopiar);
         menuEdit.add(menuItemColar);
         menuEdit.add(menuItemRecortar);
+        menuEdit.add(menuItemSelecionar);
       //  menuEdit.add(menuItemRemover);
         menuEdit.add(menuItemDesfazer);
         menuEdit.add(menuItemRefazer);
