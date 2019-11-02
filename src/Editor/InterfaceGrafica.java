@@ -14,7 +14,7 @@ import javax.swing.undo.CannotUndoException;
 import javax.swing.undo.UndoManager;
 
 /**
- * Classe com a interface grafica, suas funcionalidades de edição de texto e
+ * Classe com a interface grafica, suas funcionalidades de edicao de texto e
  * comando de fechamento e as chamadas para as funcionalidades de manipulaçãod e arquivos.
  */
 
